@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script defer src="scripts/main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid bg-info text-light">
+      <div class="container">
+        <h1 class="display-3">Bag of Holding</h1>
+        <p class="lead">
+          An example repo on working with <a class="text-dark" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> and event handlers.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="display-4">Add an Item</h2>
+          <br>
+          <form id="new-item-form">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="name">Item Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="e.g. Book of Scripting" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="effect">Item Effect</label>
+                  <input type="text" class="form-control" id="effect" placeholder="e.g. +4 JS Skills" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="weight">Item Weight</label>
+                  <div class="input-group">
+                    <input type="number" class="form-control" id="weight" aria-describedby="pounds" required>
+                    <span class="input-group-addon" id="pounds">lbs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+        </div>
+
+        <div class="col">
+          <h2 class="display-4">Current Items</h2>
+          <br>
+          <div class="row">
+            <div class="col">
+              <p>Max Weight: <strong><span id="max-weight" class='text-info'></span></strong> lbs</p>
+            </div>
+            <div class="col">
+              <p>Current Weight: <strong><span id="current-weight" class='text-info'></span></strong> lbs</p>
+            </div>
+          </div>
+
+          <div id="weight-progress" class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+          </div>
+          <br>
+
+          <ul id="bag-contents" class="list-group"></ul>
+          <br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
