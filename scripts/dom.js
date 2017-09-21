@@ -15,7 +15,8 @@ function render () {
         <b>${item.name}</b>
         <span class="text-info ml-4">${item.weight} lbs</span>
         <span class="ml-4">${item.effect}</span>
-      </li>`
+      </li>
+    `
     items.push(html)
   }
 
